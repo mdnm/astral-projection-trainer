@@ -271,7 +271,7 @@ const App = () => {
       <div className="absolute top-10 right-10 bg-white rounded-lg p-3">
         {tattva && subTattva && (
           <>
-            <a href="https://x.com/matmoura19" className="text-blue-500 underline mb-1">How to use this</a>
+            <a href="https://x.com/matmoura19/status/1835312422787100954" className="text-blue-500 underline mb-1">How to use this</a>
             <p className="mb-1">Press <kbd>Space</kbd> to hide/show the tattva/tatwa.</p>
             <p>Press <kbd>Q</kbd> to exit the meditation.</p>
           </>
@@ -280,7 +280,7 @@ const App = () => {
       {(!tattva || !subTattva) && (
         <div>
           <h1 className="text-3xl font-bold mb-1">Tattva/Tatwa Meditation</h1>
-          <a href="https://x.com/matmoura19" className="text-blue-500 underline mb-1">How to use this</a>
+          <a href="https://x.com/matmoura19/status/1835312422787100954" className="text-blue-500 underline mb-1">How to use this</a>
           <p className="mb-1">Press <kbd>Space</kbd> to hide/show the tattva/tatwa.</p>
           <p>Press <kbd>Q</kbd> to exit the meditation.</p>
           <p className="text-2xl font-bold mt-5">Options</p>
