@@ -48,7 +48,7 @@ export function tattvaToSvg({ type, subType, fillColor, subFillColor, className 
         return (
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className={className}>
             <rect width="100" height="100" fill={fillColor} />
-            <circle cx="50" cy="50" r="25" fill={subFillColor} />
+            <polygon points="50,20 90,75 10,75" fill={subFillColor} />
           </svg>
         );
       } else if (subType === 'vayu') {

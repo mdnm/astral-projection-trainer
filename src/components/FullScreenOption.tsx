@@ -7,7 +7,7 @@ interface FullScreenOptionProps {
 
 const FullScreenOption: React.FC<FullScreenOptionProps> = ({ useFullScreen, setUseFullScreen }) => {
   return (
-    <div>
+    <div className="hidden md:block">
       <p className="text-2xl font-bold mt-5">Options</p>
       <div className="flex flex-row items-center gap-2">
         <input
