@@ -59,7 +59,7 @@ const TattvaSection = ({
               fillColor: selectedMainSymbol.fillColor,
               subType: selectedSecondarySymbol.type,
               subFillColor: selectedSecondarySymbol.fillColor,
-              className: "max-w-[260px] md:max-w-[400px] object-cover"
+              className: "max-w-[260px] md:max-w-[400px] mx-auto"
             })
           )}
         </button>
