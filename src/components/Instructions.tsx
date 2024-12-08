@@ -3,9 +3,10 @@ import React from 'react';
 interface InstructionsProps {
   showOnTopRight?: boolean;
   hasStarted?: boolean;
+  handleStopPractice?: () => void;
 }
 
-const Instructions: React.FC<InstructionsProps> = ({ showOnTopRight = false, hasStarted = false }) => {
+const Instructions: React.FC<InstructionsProps> = ({ showOnTopRight = false, hasStarted = false, handleStopPractice }) => {
   return (
     <div className={showOnTopRight ? "absolute top-10 right-10 bg-white rounded-lg px-3 py-2 md:p-3 flex flex-col items-center gap-2" : "flex flex-col items-center gap-2"}>
       {!hasStarted && (
@@ -17,7 +18,7 @@ const Instructions: React.FC<InstructionsProps> = ({ showOnTopRight = false, has
       )}
       {hasStarted && (
         <>
-          <button className="text-black" onClick={() => window.location.reload()}>X</button>
+          <button className="text-black" onClick={handleStopPractice}>X</button>
         </>
       )}
     </div>

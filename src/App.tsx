@@ -171,10 +171,22 @@ const App = () => {
     }
   }, [selectedMainSymbol, selectedSecondarySymbol, useFullScreen]);
 
+  const handleStopPractice = () => {
+    setSelectedMainSymbol(null);
+    setSelectedSecondarySymbol(null);
+    setHideSymbol(false);
+    setUseFullScreen(false);
+
+    if (useFullScreen) {
+      document.exitFullscreen();
+      document.documentElement.style.cursor = 'auto';
+    }
+  }
+
   return (
     <div className={`min-h-screen flex flex-col gap-5 items-center justify-center ${(symbolType === 'tattva' && selectedMainSymbol && selectedSecondarySymbol) || (symbolType === 'tarot' && selectedMainSymbol) ? selectedMainSymbol.bgColor : 'bg-white'}`}>
       {(symbolType === 'tattva' && (selectedMainSymbol && selectedSecondarySymbol) || (symbolType === 'tarot' && selectedMainSymbol)) && (
-        <Instructions showOnTopRight hasStarted />
+        <Instructions showOnTopRight hasStarted handleStopPractice={handleStopPractice} />
       )}
 
       {((symbolType === 'tattva' && (!selectedMainSymbol || !selectedSecondarySymbol)) || (symbolType === 'tarot' && !selectedMainSymbol)) && (
