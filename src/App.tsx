@@ -52,13 +52,14 @@ const TattvaSection = ({
       )}
 
       {selectedMainSymbol && selectedSecondarySymbol && (
-        <button className="flex items-center justify-center w-[300px] h-[300px] relative" onClick={() => setHideSymbol(prev => !prev)}>
+        <button className="w-full md:w-[300px] h-[300px]" onClick={() => setHideSymbol(prev => !prev)}>
           {!hideSymbol && (
             tattvaToSvg({
               type: selectedMainSymbol.type,
               fillColor: selectedMainSymbol.fillColor,
               subType: selectedSecondarySymbol.type,
               subFillColor: selectedSecondarySymbol.fillColor,
+              className: "max-w-[260px] md:max-w-[400px] object-cover"
             })
           )}
         </button>
